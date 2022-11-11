@@ -1,6 +1,6 @@
+import java.util.Arrays;
 import java.util.StringJoiner;
 public class Main {
-
     public static void main(String[] args) {
         System.out.println("Hello world!");
         int[] array = new int[]{1, 2, 3};
@@ -10,7 +10,7 @@ public class Main {
 
     }
 
-    public static void printNeatly(int[] array, double [] numbers, float [] random) {
+    public static void printNeatly(int[] array, double[] numbers, float[] random) {
         StringJoiner stringJoiner = new StringJoiner(", ");
         for (int aNum : array)
             stringJoiner.add("" + aNum);
@@ -25,7 +25,16 @@ public class Main {
         for (float aNum : random)
             stringJoiner2.add("" + aNum);
         System.out.println(stringJoiner2.toString());
+        for (int i = array.length-1; i >= 0; i--) {
+            System.out.print(array[i] + ", ");
+        }
+        System.out.println();
+        for (double i = numbers.length-1; i >= 0; i--) {
+            System.out.print(numbers[(int) i] + ", ");
+        }
+        System.out.println();
+        for (float i = random.length-1; i >= 0; i--) {
+            System.out.print(random[(int) i] + ", ");
+        }
     }
 }
-
-
