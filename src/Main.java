@@ -5,10 +5,12 @@ public class Main {
         System.out.println("Hello world!");
         int[] array = new int[]{1, 2, 3};
         double[] numbers = new double[]{1.57, 7.654, 9.986};
-        printNeatly(array, numbers);
+        float[] random = new float[]{2.555f, 28.784f, 34.552f, 109.8567f};
+        printNeatly(array, numbers, random);
+
     }
 
-    public static void printNeatly(int[] array, double [] numbers) {
+    public static void printNeatly(int[] array, double [] numbers, float [] random) {
         StringJoiner stringJoiner = new StringJoiner(", ");
         for (int aNum : array)
             stringJoiner.add("" + aNum);
@@ -18,8 +20,12 @@ public class Main {
         for (double numAm : numbers)
             stringJoiner1.add("" + numAm);
         System.out.print(stringJoiner1.toString());
+        System.out.println();
+        StringJoiner stringJoiner2 = new StringJoiner(", ");
+        for (float aNum : random)
+            stringJoiner2.add("" + aNum);
+        System.out.println(stringJoiner2.toString());
     }
-        float[] random = new float[]{2.555f, 28.784f, 34.552f, 109.8567f};
 }
 
 
