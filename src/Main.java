@@ -1,14 +1,25 @@
+import java.util.StringJoiner;
 public class Main {
+
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        int[] simpleNumbers = new int[]{1, 2, 3};
-        simpleNumbers[0] = 1;
-        simpleNumbers[1] = 2;
-        simpleNumbers[2] = 3;
-        for (int i = 0; i < simpleNumbers.length; i++) {
-            System.out.println(simpleNumbers[i]);
-        }
+        int[] array = new int[]{1, 2, 3};
         double[] numbers = new double[]{1.57, 7.654, 9.986};
-        float[] random = new float[]{2.555f, 28.784f, 34.552f, 109.8567f};
+        printNeatly(array, numbers);
     }
+
+    public static void printNeatly(int[] array, double [] numbers) {
+        StringJoiner stringJoiner = new StringJoiner(", ");
+        for (int aNum : array)
+            stringJoiner.add("" + aNum);
+        System.out.print(stringJoiner.toString());
+        System.out.println();
+        StringJoiner stringJoiner1 = new StringJoiner(", ");
+        for (double numAm : numbers)
+            stringJoiner1.add("" + numAm);
+        System.out.print(stringJoiner1.toString());
+    }
+        float[] random = new float[]{2.555f, 28.784f, 34.552f, 109.8567f};
 }
+
+
