@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.StringJoiner;
 public class Main {
@@ -25,16 +26,23 @@ public class Main {
         for (float aNum : random)
             stringJoiner2.add("" + aNum);
         System.out.println(stringJoiner2.toString());
-        for (int i = array.length-1; i >= 0; i--) {
+        for (int i = array.length - 1; i >= 0; i--) {
             System.out.print(array[i] + ", ");
         }
         System.out.println();
-        for (double i = numbers.length-1; i >= 0; i--) {
+        for (double i = numbers.length - 1; i >= 0; i--) {
             System.out.print(numbers[(int) i] + ", ");
         }
         System.out.println();
-        for (float i = random.length-1; i >= 0; i--) {
+        for (float i = random.length - 1; i >= 0; i--) {
             System.out.print(random[(int) i] + ", ");
+        }
+        System.out.println();
+        for (int l = 0; l < stringJoiner.toString().length(); l++) {
+            while (l % 2 != 0) {
+                l = l + 1;
+                System.out.print(l);
+            }
         }
     }
 }
