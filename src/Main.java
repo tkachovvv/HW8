@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 import java.util.StringJoiner;
 public class Main {
     public static void main(String[] args) {
@@ -38,10 +39,10 @@ public class Main {
             System.out.print(random[(int) i] + ", ");
         }
         System.out.println();
-        for (int l = 0; l < stringJoiner.toString().length(); l++) {
-            while (l % 2 != 0) {
-                l = l + 1;
-                System.out.print(l);
+        for (int j = 0; j < array.length; j++) {
+            if (j % 2 != 0) {
+                j = j + 1;
+                System.out.print(array[j] + " ");
             }
         }
     }
