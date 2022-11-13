@@ -39,11 +39,16 @@ public class Main {
             System.out.print(random[(int) i] + ", ");
         }
         System.out.println();
-        for (int j = 0; j < array.length; j++) {
-            if (j % 2 != 0) {
-                j = j + 1;
-                System.out.print(array[j] + " ");
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] % 2 != 0) {
+                    array[i] = array[i] + 1;
+                    System.out.print(array[i] + " ");
+                } else if (array[i] % 2 == 0) {
+                    System.out.print(array[i] + " ");
+                }
             }
-        }
     }
 }
+
+
+
